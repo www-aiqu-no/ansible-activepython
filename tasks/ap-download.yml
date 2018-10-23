@@ -1,0 +1,11 @@
+---
+
+# TODO: Check SHA256
+
+- name: ap | check download status
+  raw: "test -f {{ ap_package_filename }} && echo 'present' || echo 'missing'"
+  register: package_status
+
+- block:
+  - raw: "wget {{ ap_package_url }}"
+  when: package_status.stdout_lines[0] == "missing"

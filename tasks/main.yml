@@ -1,0 +1,16 @@
+---
+
+- name: ap | check python status
+  raw: "test -e {{ ansible_python_interpreter }} || echo 'missing'"
+  register: python_status
+  changed_when: false
+
+- block:
+
+  - include_vars: coreos.yml
+  - include: ap-download.yml
+  - include: ap-unzip.yml
+  - include: ap-install.yml
+  - include: ap-symlink.yml
+
+  when: python_status.stdout_lines[0] is defined

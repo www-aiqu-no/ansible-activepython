@@ -1,0 +1,6 @@
+---
+
+base_dir:
+  packages: "/opt"
+  binaries: "/opt/bin"
+  downloads: "/tmp"

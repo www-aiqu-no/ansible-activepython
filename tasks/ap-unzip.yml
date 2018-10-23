@@ -1,0 +1,9 @@
+---
+
+- name: ap | check unzipped status
+  raw: "test -d {{ap_package_name}} && echo 'present' || echo 'missing'"
+  register: unzipped_status
+
+- block:
+  - raw: "tar -xvf {{ap_package_filename}}"
+  when: unzipped_status.stdout_lines[0] == "missing"

@@ -1,0 +1,9 @@
+---
+
+- name: ap | create installation directory
+  become: true
+  raw: "mkdir -p {{ base_dir['packages'] }}/ap"
+
+- name: ap | run installer
+  become: true
+  raw: "cd {{ ap_package_name }} && ./install.sh -I {{ base_dir['packages'] }}/ap/{{ ap_version }}"

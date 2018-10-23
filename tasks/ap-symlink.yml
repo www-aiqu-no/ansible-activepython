@@ -1,0 +1,25 @@
+---
+
+- name: ap | link easy_install
+  become: true
+  raw: "ln -sf {{ base_dir['packages'] }}/ap/{{ ap_version }}/bin/easy_install {{ base_dir['binaries'] }}/easy_install"
+
+- name: ap | link pip
+  become: true
+  raw: "ln -sf {{ base_dir['packages'] }}/ap/{{ ap_version }}/bin/pip3 {{ base_dir['binaries'] }}/pip"
+
+- name: ap | link pip3
+  become: true
+  raw: "ln -sf {{ base_dir['packages'] }}/ap/{{ ap_version }}/bin/pip3 {{ base_dir['binaries'] }}/pip3"
+
+- name: ap | link python
+  become: true
+  raw: "ln -sf {{ base_dir['packages'] }}/ap/{{ ap_version }}/bin/python3 {{ base_dir['binaries'] }}/python"
+
+- name: ap | link python3
+  become: true
+  raw: "ln -sf {{ base_dir['packages'] }}/ap/{{ ap_version }}/bin/python3 {{ base_dir['binaries'] }}/python3"
+
+- name: ap | link virtualenv
+  become: true
+  raw: "ln -sf {{ base_dir['packages'] }}/ap/{{ ap_version }}/bin/virtualenv {{ base_dir['binaries'] }}/virtualenv"
