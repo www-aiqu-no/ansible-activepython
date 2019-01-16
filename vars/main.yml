@@ -2,7 +2,6 @@
 
 ansible_python_interpreter: "{{ base_dir['binaries'] }}/python3"
 
-ap_releases: "https://downloads.activestate.com/ActivePython/releases"
 ap_package_name: "ActivePython-{{ ap_version }}-linux-{{ ap_arch }}-glibc-{{ ap_glibc_version }}"
 ap_package_filename: "{{ ap_package_name }}.tar.gz"
 ap_package_url: "{{ ap_releases }}/{{ ap_version }}/{{ ap_package_filename }}"

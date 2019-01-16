@@ -1,5 +1,9 @@
 ---
 
+- name: ap | create binaries directory
+  become: true
+  raw: "mkdir -p -m 0755 {{ base_dir['binaries'] }}"
+
 - name: ap | link easy_install
   become: true
   raw: "ln -sf {{ base_dir['packages'] }}/ap/{{ ap_version }}/bin/easy_install {{ base_dir['binaries'] }}/easy_install"

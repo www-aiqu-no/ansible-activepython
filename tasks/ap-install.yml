@@ -6,4 +6,4 @@
 
 - name: ap | run installer
   become: true
-  raw: "cd {{ ap_package_name }} && ./install.sh -I {{ base_dir['packages'] }}/ap/{{ ap_version }}"
+  raw: "cd {{ ap_package_name }}* && ./install.sh -I {{ base_dir['packages'] }}/ap/{{ ap_version }}"
