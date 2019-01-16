@@ -2,5 +2,5 @@
 ##  Required Parameters; See https://downloads.activestate.com/ActivePython/releases/
 #
 ap_arch: "x86_64"
-ap_version: "3.6.0.3600"
-glibc_version: "2.3.6-401834"
+ap_version: "3.6.6.3606"
+glibc_version: "2.12"
